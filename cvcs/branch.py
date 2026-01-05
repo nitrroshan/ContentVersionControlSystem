@@ -95,7 +95,12 @@ class BranchManager:
         source_tree = source_commit.get("tree", {})
         target_tree = target_commit.get("tree", {}) if target_commit else {}
         
-        # Find common ancestor (simplified - just use target as base)
+        # Find common ancestor
+        # NOTE: This is a simplified implementation that uses the target branch as the base.
+        # A full implementation would traverse the commit graph to find the actual
+        # common ancestor (lowest common ancestor/LCA). For most linear workflows,
+        # using target as base provides reasonable merge behavior.
+        # TODO: Implement proper LCA algorithm for complex merge scenarios.
         base_tree = target_tree.copy()
         
         conflicts = []

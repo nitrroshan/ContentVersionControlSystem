@@ -26,6 +26,7 @@ class Repository:
     def init(self) -> bool:
         """Initialize a new CVCS repository."""
         if self.cvcs_dir.exists():
+            print(f"Repository already exists at {self.cvcs_dir}")
             return False
         
         # Create directory structure
