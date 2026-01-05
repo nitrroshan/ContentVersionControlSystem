@@ -251,6 +251,8 @@ See [LICENSE](LICENSE) file for details.
 
 - [Design Documentation](DESIGN.md) - Comprehensive design and requirements
 - [Architecture Guide](ARCHITECTURE.md) - Technical architecture and data flows
+- [Binary Merging Challenges](BINARY_MERGING_CHALLENGES.md) - Why Git LFS uses file locking and how CVCS overcomes binary merging challenges
+- [Examples](EXAMPLES.md) - Practical usage examples
 
 ---
 

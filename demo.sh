@@ -7,12 +7,14 @@ set -e
 echo "=== CVCS Demo: Content-Based Version Control for All Files ==="
 echo ""
 
+# Get the directory where this script is located (before changing directory)
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+CVCS_CLI="$SCRIPT_DIR/cvcs-cli.py"
+
 # Create demo directory
 DEMO_DIR="/tmp/cvcs_demo_$(date +%s)"
 mkdir -p "$DEMO_DIR"
 cd "$DEMO_DIR"
-
-CVCS_CLI="/home/runner/work/ContentVersionControlSystem/ContentVersionControlSystem/cvcs-cli.py"
 
 echo "Step 1: Initialize repository"
 $CVCS_CLI init
