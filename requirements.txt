@@ -1,0 +1,11 @@
+# CVCS Dependencies
+# Core dependencies (optional for enhanced functionality)
+
+# For .docx file support
+python-docx>=0.8.11
+
+# For .odt file support
+odfpy>=1.4.1
+
+# For .pdf file support
+PyPDF2>=3.0.0
